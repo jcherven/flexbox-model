@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+
+    <style>
+      .container {
+        margin-top: 50px;
+        padding: 20px 0;
+        background-color: #f19861;
+
+        /*****************************************************/
+        /* These are the basic flexbox container properties: */
+        /*****************************************************/
+        display: flex;
+        /******************/
+        /* flex-direction */
+        /******************/
+        /* column || row */
+        flex-direction: column;
+        /*************/
+        /* flex-wrap */
+        /*************/
+        /* nowrap is the default */
+        /* nowrap || wrap || wrap-reverse || initial || inherit */
+        flex-wrap: nowrap;
+        /*************/
+        /* flex-flow */
+        /*************/
+        /* The flex-flow property can combine direction and wrap in one prop */
+        /* Try commenting flex-direction and flex-wrap out, then uncommenting flex-flow. The result is the same. */
+        /* flex-flow: row wrap; */
+        justify-content: space-evenly;
+      }
+
+      .item {
+        padding: 30px;
+        margin: 10px;
+        background-color: #06af8f;
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">A</div>
+      <div class="item item-2">B</div>
+      <div class="item item-3">C</div>
+      <div class="item item-4">D</div>
+      <div class="item item-5">E</div>
+    </div>
+  </body>
+</html>
