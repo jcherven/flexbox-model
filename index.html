@@ -6,6 +6,7 @@
 
     <style>
       .container {
+        /* height: 700px; */
         margin-top: 50px;
         padding: 20px 0;
         background-color: #f19861;
@@ -14,36 +15,71 @@
         /* These are the basic flexbox container properties: */
         /*****************************************************/
         display: flex;
+
         /******************/
         /* flex-direction */
         /******************/
-        /* column || row */
-        flex-direction: column;
+        /* row is the default */
+        /* row | column */
+        flex-direction: row;
+
         /*************/
         /* flex-wrap */
         /*************/
         /* nowrap is the default */
-        /* nowrap || wrap || wrap-reverse || initial || inherit */
-        flex-wrap: nowrap;
+        /* nowrap | wrap | wrap-reverse | initial | inherit */
+        flex-wrap: wrap;
+
         /*************/
         /* flex-flow */
         /*************/
         /* The flex-flow property can combine direction and wrap in one prop */
         /* Try commenting flex-direction and flex-wrap out, then uncommenting flex-flow. The result is the same. */
-        /* flex-flow: row wrap; */
-        justify-content: space-evenly;
+        /* flex-flow: row nowrap; */
+
+        /*******************/
+        /* justify-content */
+        /*     for         */
+        /* main axis       */
+        /*******************/
+        /* flex-start is the default */
+        /* flex-start | center | flex-end | left | right | space-around | space-evenly | space-between | ... */
+        justify-content: space-around;
+
+        /*******************/
+        /* align-items     */
+        /*     for         */
+        /* cross axis      */
+        /*******************/
+        /* stretch is the default */
+        /* stretch | flex-start | center | flex-end | baseline | inherit | ... */
+        align-items: flex-start;
+
+        /*****************/
+        /* align-content */
+        /*      for      */
+        /* wrapped items */
+        /*****************/
+        /* stretch is the default */
+        /* stretch | flex-start | center | flex-end | space-between | space-around | space-evenly */
+        align-content: stretch; 
       }
 
       .item {
+        width: 70px;
         padding: 30px;
         margin: 10px;
         background-color: #06af8f;
         text-align: center;
         font-size: 30px;
         color: #fff;
+
+      }
+
+      .item-1 {
+        /* font-size: 70px; */
       }
     </style>
-
   </head>
   <body>
     <div class="container">
