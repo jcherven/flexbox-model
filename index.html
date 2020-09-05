@@ -6,7 +6,7 @@
 
     <style>
       .container {
-        /* height: 700px; */
+        height: 700px;
         margin-top: 50px;
         padding: 20px 0;
         background-color: #f19861;
@@ -28,13 +28,13 @@
         /*************/
         /* nowrap is the default */
         /* nowrap | wrap | wrap-reverse | initial | inherit */
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
 
         /*************/
         /* flex-flow */
         /*************/
-        /* The flex-flow property can combine direction and wrap in one prop */
-        /* Try commenting flex-direction and flex-wrap out, then uncommenting flex-flow. The result is the same. */
+        /* shorthand for combining /flex-direction/flex-wrap/ in one prop*/
+        /* default: row nowrap */
         /* flex-flow: row nowrap; */
 
         /*******************/
@@ -53,7 +53,7 @@
         /*******************/
         /* stretch is the default */
         /* stretch | flex-start | center | flex-end | baseline | inherit | ... */
-        align-items: flex-start;
+        align-items: center;
 
         /*****************/
         /* align-content */
@@ -62,11 +62,11 @@
         /*****************/
         /* stretch is the default */
         /* stretch | flex-start | center | flex-end | space-between | space-around | space-evenly */
-        align-content: stretch; 
+        /* align-content: stretch;  */
       }
 
       .item {
-        width: 70px;
+        width: 200px;
         padding: 30px;
         margin: 10px;
         background-color: #06af8f;
@@ -78,6 +78,56 @@
 
       .item-1 {
         /* font-size: 70px; */
+        width: 200px;
+        order: 6;
+
+        /*************/
+        /* flex-grow */
+        /*************/
+        /* allows items to occupy free space in container */
+        /* default is 0 */
+        /* number value is multiplier for how much space the item occupies */
+        /* 0 | 1  | n */
+        /* flex-grow:5; */
+
+        /***************/
+        /* flex-shrink */
+        /***************/
+        /* behaves similarly to flex-grow */
+        /* 1 is the default */
+        /* 0 value will not shrink */
+        /* flex-shrink: 1; */
+
+        /**************/
+        /* flex-basis */
+        /**************/
+        /* specifies the main axis size of the item */
+        /* flex-basis: 100px; */
+
+        /* flex */
+        /* default: 0 1 auto */
+        /* shorthand for combining /flex-grow/flex-shrink/flex-basis in one prop*/
+        flex: 0 1 auto
+
+      }
+
+      .item-5 {
+        /*********/
+        /* order */
+        /*********/
+        order: -1;
+
+        /**************/
+        /* align-self */
+        /*     for    */
+        /* cross axis */
+        /**************/
+        /* default value is auto */
+        /* auto | baseline | flex-start | center | flex-end | stretch */
+        /* align-self:stretch; */
+
+        flex-grow: 1;
+
       }
     </style>
   </head>
